@@ -1,5 +1,0 @@
-{
-  "name": "XML Feed to CSV File Converter",
-  "description": "High-performance tool to analyze large XML product feeds (Google Shopping, Heureka, etc.) and convert selected fields to CSV.",
-  "requestFramePermissions": []
-}
