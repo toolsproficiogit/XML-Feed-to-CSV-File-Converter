@@ -11,10 +11,10 @@ RUN corepack enable
 # COPY . ./
 #
 # If the app is in subfolder, keep pattern below:
-COPY xml-feed-to-csv-converter/package.json xml-feed-to-csv-converter/pnpm-lock.yaml* ./
+COPY xml-feed-to-csv-file-converter/package.json xml-feed-to-csv-file-converter/pnpm-lock.yaml* ./
 RUN pnpm install --frozen-lockfile || pnpm install
 
-COPY xml-feed-to-csv-converter/ ./
+COPY xml-feed-to-csv-file-converter/ ./
 
 # Build (Vite usually outputs /dist)
 RUN pnpm run build

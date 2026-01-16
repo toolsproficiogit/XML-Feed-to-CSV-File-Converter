@@ -8,7 +8,7 @@ steps:
       [
         'build',
         '-t',
-        'europe-west1-docker.pkg.dev/$PROJECT_ID/web-apps/xml-feed-to-csv-converter:$SHORT_SHA',
+        'europe-west1-docker.pkg.dev/$PROJECT_ID/web-apps/xml-feed-to-csv-file-converter:$SHORT_SHA',
         '-f',
         'Dockerfile',
         '.'
@@ -19,7 +19,7 @@ steps:
     args:
       [
         'push',
-        'europe-west1-docker.pkg.dev/$PROJECT_ID/web-apps/xml-feed-to-csv-converter:$SHORT_SHA'
+        'europe-west1-docker.pkg.dev/$PROJECT_ID/web-apps/xml-feed-to-csv-file-converter:$SHORT_SHA'
       ]
 
   - name: 'gcr.io/cloud-builders/gcloud'
@@ -30,7 +30,7 @@ steps:
         'deploy',
         'xml-feed-to-csv-converter',
         '--image',
-        'europe-west1-docker.pkg.dev/$PROJECT_ID/web-apps/xml-feed-to-csv-converter:$SHORT_SHA',
+        'europe-west1-docker.pkg.dev/$PROJECT_ID/web-apps/xml-feed-to-csv-file-converter:$SHORT_SHA',
         '--region',
         'europe-west1',
         '--platform',
@@ -41,4 +41,4 @@ steps:
       ]
 
 images:
-  - 'europe-west1-docker.pkg.dev/$PROJECT_ID/web-apps/xml-feed-to-csv-converter:$SHORT_SHA'
+  - 'europe-west1-docker.pkg.dev/$PROJECT_ID/web-apps/xml-feed-to-csv-file-converter:$SHORT_SHA'
